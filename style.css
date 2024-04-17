@@ -1,3 +1,101 @@
-body{
-    
+body {
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex: 1; */
+    min-height: 100vh;
+    background: lightseagreen;
+  }
+
+.clock-face{
+    width: 25rem;
+    position: relative;
+    height: 25rem;
+    border: 15px solid rgb(21, 15, 15);
+    border-radius: 50%;
+    box-shadow: 
+        3px 3px 4px 4px rgb(92, 91, 91),
+        inset 0 0 4px 2px rgb(80, 80, 80),
+        inset 2px 2px 4px 3px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.hand{
+    position: absolute;
+    top:50%;
+    background:rgb(5, 5, 5);
+    transform: translate(0, -50%) rotate(90deg);
+    transform-origin: 100%;
+    /* transform: rotate(90deg); */
+    transition: all infinite 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+#digit-V{
+    height:25rem;
+    width:3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#digit-H{
+    height:3rem;
+    width:25rem;
+    display: flex;
+    /* flex-direction: row; */
+    position:absolute;
+    justify-content: space-between;
+    align-items: center;
+}
+.hour-hand{
+    height: 10px;
+    width: 35%;
+    left: 15%;
+    border-radius: 20%;
+    transform: rotate(90deg);
+
+}
+.minute-hand{
+    height: 6px;
+    width: 43%;
+    left: 7%;
+    border-radius: 20%;
+
+}
+.second-hand{
+    height: 2px;
+    width:50%;
+    left: 4%;
+    border-radius: 20%;
+    background-color: white;
+    transform: rotate(180deg);
+    transform-origin: 90%;
+}
+.second-hand::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background-color: white;
+    left: 90%;
+    top: -50%;
+    content: "";
+    display: block;
+    position: absolute;
+    right: 16%;
+    top: -50%;
+    width: 12px; 
+    height: 12px; 
+    border-radius: 50%;
+    background-color: white; 
+}
+
+
+
