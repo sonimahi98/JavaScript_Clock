@@ -76,26 +76,17 @@ body {
     transform: rotate(180deg);
     transform-origin: 90%;
 }
-.second-hand::after{
+/* .second-hand::after{
     content: "";
     display: block;
     position: absolute;
-    height: 13px;
+    height: 6px;
     width: 13px;
     border-radius: 50%;
     background-color: white;
-    left: 90%;
-    top: -50%;
-    content: "";
-    display: block;
-    position: absolute;
-    right: 16%;
-    top: -50%;
-    width: 12px; 
-    height: 12px; 
-    border-radius: 50%;
-    background-color: white; 
-}
+    left: 100%;
+    top: 100%; 
+} */
 
 
 
